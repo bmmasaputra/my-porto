@@ -1,0 +1,129 @@
+rgb(44, 50, 58)
+#22252e main
+#15161a
+rgb(124, 194, 218)
+
+rgb(231, 231, 231)
+
+rgb(79, 137, 156)
+
+<div> Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
+
+body {
+    background-color: #22252e;
+    color: white;
+    font-family: Poppins, Arial;
+ }
+
+.home-page {
+    height: 950px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-container {
+    width: 300px;
+}
+
+.profile-image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image {
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, .5);
+}
+
+.greeting {
+    font-weight: 700;
+    font-size: 15px;
+    color: rgb(200, 200, 200);
+    margin-top: 35px;
+    margin-bottom: 5px;
+}
+
+.name {
+    font-family: Poppins, Arial;
+    font-weight: 500;
+    font-size: 30px;
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.occupation {
+    font-family: Poppins, Arial;
+    font-weight: 400;
+    font-size: 25px;
+    white-space: nowrap;
+    color: rgb(200, 200, 200);
+}
+
+.sidebar {
+    position: absolute;
+    top: 380px;
+    height: 250px;
+    left: 30px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-link{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(231, 231, 231);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.sidebar-link span {
+    position: absolute;
+    left: 60px;
+    color: white;
+    opacity: 0;
+    transition: .2s;
+    pointer-events: none;
+}
+
+.sidebar-link:hover {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.sidebar-link:hover span {
+    opacity: 1;
+}
+
+animasi underline
+
+.facts-header span::after {
+    content: '';
+    display: block;
+    border-bottom: solid 2px #22252e;
+    transform: scaleX(0);
+}
+
+.facts-header span:hover::after {
+    transform: scaleX(0.1);
+    transition: 0.2s linear;
+}
+
+
+home page height: 1100px;
+about page height: 1000px;
+portofolio top: 2100px
+
+
+fact 1fr 1fr:
+portofolio-page top: 2450px; (2100)
+about-page height: 1350px; (1000)
