@@ -525,22 +525,26 @@ body {
         height: 1200px;
     }
 
-    .portofolio-grid {
-        width: 400px;
+     .portofolio-grid {
+        width: 300px;
         height: 598px;
-        margin-bottom: 250px;
+        margin-bottom: 200px;
         row-gap: 0px;
+        column-gap: 0px;
     }
 
     .project {
-        height: 244px;
+        height: 185px;
+        padding-top: 20px;
         margin-bottom: 50px;
+        border-radius: 20px;
     }
 
     .project:hover {
-        height: 474px;
+        padding-top: 10px;
+        height: 460px;
     }
-
+    
     .services-page {
         top: 4800px;
     }
