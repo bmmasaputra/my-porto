@@ -526,14 +526,14 @@ body {
     }
 
     .portofolio-grid {
-        width: 450px;
+        width: 400px;
         height: 598px;
         margin-bottom: 250px;
         row-gap: 0px;
     }
 
     .project {
-        height: 274px;
+        height: 244px;
         margin-bottom: 50px;
     }
 
