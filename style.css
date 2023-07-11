@@ -603,11 +603,11 @@ svg {
     }
 
     .services-page {
-        top: 4250px;
+        top: calc(100vh + 3150px);
     }
 
     .contact-page {
-        top: 5250px;
+        top: calc(100vh + 3700px);
     }
 }
 
@@ -681,10 +681,18 @@ svg {
     }
 
     .services-page {
-        top: calc(100vh + 3650px);
+        height: 800px;
+        top: calc(100vh + 3550px);
+    }
+
+    .service-section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 50px;
     }
 
     .contact-page {
-        top: calc(100vh + 4650px);
+        top: calc(100vh + 4350px);
     }
 }
