@@ -201,27 +201,27 @@
       </div>
     </section>
     <section class="contact-page" id="contact">
-      <div class="contact-section">
+      <form name="submit-to-google-sheet" class="contact-section">
         <div class="contact-header-wrap">
           <div class="contact-header">Contact</div>
           <p>Hire me</p>
         </div>
         <div class="input-section">
           <div class="name-email">
-            <input type="text" placeholder="Name" required>
+            <input type="text" name="name" placeholder="Name" required>
             <input type="email" name="email" placeholder="Email ID" required>
           </div>
           <div class="subject">
-            <input type="text" placeholder="Subject" required>
+            <input type="text" name="subject" placeholder="Subject" required>
           </div>
           <div class="message">
-            <textarea rows="5" placeholder="Message"></textarea>
+            <textarea rows="5" name="message" placeholder="Message"></textarea>
           </div>
         </div>
         <div class="button-wrap">
           <button type="submit" class="send-button">SEND IT!!</button>
         </div>
-      </div>
+      </form>
     </section>
     <footer class="footer">
       Footer
@@ -245,6 +245,16 @@
           }
         });
       });
+
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyrzHiDQ_cxRVGV9yHJtj3dqzoT8oZt_BfBdYxrEBcGTvqUyYBhYWK4xxqRkDFaLLw/exec';
+      const form = document.forms['submit-to-google-sheet']
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
     </script>
   </body>
 </html>
