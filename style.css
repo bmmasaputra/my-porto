@@ -496,7 +496,6 @@ svg {
     justify-content: center;
     align-items: center;
     height: 700px;
-    margin-bottom: 500px;
     top: calc(100vh + 2450px);
     background-color: #22252e;
     z-index: -2;
@@ -504,6 +503,7 @@ svg {
 
 .contact-section {
     width: 1200px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -511,7 +511,7 @@ svg {
 }
 
 .contact-header-wrap {
-    width: 850px;
+    width: 100%;
     text-align: center;
 }
 
@@ -636,7 +636,7 @@ textarea::placeholder {
 .footer {
     height: 500px;
     background-color: rgb(19, 19, 19);
-    top: calc(100vh + 3150px);;
+    top: calc(100vh + 3150px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -670,6 +670,10 @@ textarea::placeholder {
 
     .contact-page {
         top: calc(100vh + 2900px);
+    }
+
+    .footer {
+        top: calc(100vh + 3600px);
     }
 }
 
@@ -717,6 +721,10 @@ textarea::placeholder {
     .contact-page {
         top: calc(100vh + 3250px);
     }
+
+    .footer {
+        top: calc(100vh + 3950px);
+    }
 }
 
 @media (max-width: 870px) {
@@ -750,7 +758,48 @@ textarea::placeholder {
     }
 
     .contact-page {
+        height: 750px;
         top: calc(100vh + 3700px);
+    }
+    
+    .contact-section {
+        width: 100%;
+    }
+    
+    .input-section {
+        width: 70%;
+    }
+
+    .name-email {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .send-button {
+        transition: 0s;
+    }
+
+    .send-button:hover {
+        color: white;
+    }
+
+    .send-button::before {
+        transition: 0s;
+    }
+
+    .send-button:hover::before {
+        transform: scaleX(0);
+    }
+
+    .send-button:active,
+    .send-button:active::before {
+        color: #22252e;
+        opacity: 1;
+        transform: scaleX(1);
+    }
+
+    .footer {
+        top: calc(100vh + 4450px);
     }
 }
 
@@ -837,5 +886,13 @@ textarea::placeholder {
 
     .contact-page {
         top: calc(100vh + 4350px);
+    }
+
+    .input-section {
+        width: 70%;
+    }
+
+    .footer {
+        top: calc(100vh + 5100px);
     }
 }
