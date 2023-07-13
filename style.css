@@ -635,11 +635,115 @@ textarea::placeholder {
 
 .footer {
     height: 500px;
-    background-color: rgb(19, 19, 19);
+    background-color: rgb(44, 46, 58);
     top: calc(100vh + 3150px);
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.footer-container {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-name {
+    width: 100%;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.middle-footer {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(255, 255, 255);
+}
+
+.contact-footer {
+    width: 300px;
+}
+
+.contact-footer div {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.contact-footer p {
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.footer-link {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-link div {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.footer-link a {
+    color: inherit;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.footer-link a:hover {
+    opacity: .8;
+}
+
+hr {
+    height: 1px;
+    width: 100%;
+    margin: 20px 0px;
+    background-color: white;
+}
+
+.sosmed-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 12px;
+}
+
+.sosmed-link {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sosmed-link, 
+.sosmed-link i {
+    transition: 0s;
+}
+
+.sosmed-link:hover,
+.sosmed-link:hover i {
+    background-color: white;
+    color: rgb(44, 46, 58);
+    transition: .1s;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 12px;
 }
 
 @media (max-width: 1250px) {
@@ -674,6 +778,14 @@ textarea::placeholder {
 
     .footer {
         top: calc(100vh + 3600px);
+    }
+
+    .footer-container {
+        width: 1100px;
+    }
+
+    .contact-footer, .footer-link {
+        width: 200px;
     }
 }
 
@@ -724,6 +836,10 @@ textarea::placeholder {
 
     .footer {
         top: calc(100vh + 3950px);
+    }
+
+    .footer-container{
+        width: 800px;
     }
 }
 
@@ -800,6 +916,18 @@ textarea::placeholder {
 
     .footer {
         top: calc(100vh + 4450px);
+    }
+
+    .footer-container {
+        width: 600px;
+    }
+
+    .middle-footer {
+        width: 90%;
+    }
+
+    .footer-link {
+        width: 100px;
     }
 }
 
@@ -893,6 +1021,18 @@ textarea::placeholder {
     }
 
     .footer {
+        height: 700px;
         top: calc(100vh + 5100px);
+    }
+
+    .footer-container {
+        width: 350px;
+    }
+
+    .middle-footer {
+        width: 85%;
+        flex-direction: column;
+        row-gap: 20px;
+        padding-left: 0px;
     }
 }
