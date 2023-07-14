@@ -547,6 +547,51 @@ svg {
     row-gap: 20px;
 }
 
+.dismiss-alert {
+    width: 100%;
+    height: 46px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    background-color: rgb(141, 197, 141);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dismiss-alert p {
+    color: black;
+    font-size: 15px;
+    flex: 20;
+}
+
+.dismiss-button {
+    flex: 1;
+    height: 100%;
+    background: none;
+    border: none;
+    border-end-end-radius: 10px;
+    border-start-end-radius: 10px;
+    transition: .2s;
+}
+
+.dismiss-button i {
+    font-size: 35px;
+    color: rgba(0, 0, 0, .5);
+}
+
+.dismiss-button:hover {
+    background-color: rgba(255, 255, 255, .3);
+} 
+
+.dismiss-button:active {
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.dismiss-button i:hover {
+    color: rgba(0, 0, 0, .5);
+}
+
 .name-email {
     width: 100%;
     display: flex;
@@ -593,6 +638,8 @@ textarea::placeholder {
 
 .send-button {
     width: 170px;
+    height: 46px;
+    box-sizing: border-box;
     font-size: 15px;
     font-family: Poppins, Arial;
     font-weight: 500;
@@ -631,6 +678,69 @@ textarea::placeholder {
 
 .send-button:active {
     opacity: .8;
+}
+
+.loading-button {
+    position: relative;
+    width: 170px;
+    height: 46px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: Poppins, Arial;
+    font-weight: 500;
+    line-height: 30px;
+    background: none;
+    padding: 4px 50px;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.loading-animation {
+    position: absolute;
+    top: 4px;
+    height: 30px;
+    width: 30px;
+    animation: rotate 2s linear infinite;
+}
+
+.loading-animation circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke: white;
+    stroke-dasharray: 75;
+    stroke-dashoffset: 75;
+    animation: animate 4s linear infinite;
+}
+
+.disabled {
+    display: none;
+}
+
+@keyframes animate {
+    0%,100% {
+        stroke-dashoffset: 75;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+    }
+
+    50.1% {
+        stroke-dashoffset: 150;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .footer {
@@ -1018,6 +1128,10 @@ hr {
 
     .input-section {
         width: 70%;
+    }
+
+    .dismiss-alert p {
+        font-size: 14px;
     }
 
     .footer {
