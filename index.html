@@ -39,6 +39,61 @@
         <i class="bx bx-envelope"></i><span>Contact</span>
       </a>
     </div>
+    <nav class="navbar-tablet disabled">
+      <div class="nav-container">
+        <a href="#" class="left-nav">bmmasaputra</a>
+        <div class="right-nav">
+          <a class="nav-link nav-active" href="#home">Home</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#portofolio">Portofolio</a>
+          <a class="nav-link" href="#services">Services</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+    <nav class="mobile-nav">
+      <div class="leftnav">
+        <a href="#" class="nav-logo">bmmasptra</a>
+      </div>
+      <div class="middlenav">
+        <a href="#home" class="indicator indicator-active">Home</a>
+        <a href="#about" class="indicator">About</a>
+        <a href="#portofolio" class="indicator">Portofolio</a>
+        <a href="#services" class="indicator">Services</a>
+        <a href="#contact" class="indicator">Contact</a>
+      </div>
+      <div class="rightnav">
+        <button class="hamburger-menu"><i class='bx bx-menu'></i></button>
+      </div>
+    </nav>
+    <div class="menu">
+      <div class="menu-container">
+        <a href="#home" class="menu-link">
+          <i class="bx bx-home"></i>
+          <span>Menu</span>
+        </a>
+        <a href="#about" class="menu-link">
+          <i class="bx bx-user"></i>
+          <span>About</span>
+        </a>
+        <a href="#portofolio" class="menu-link">
+          <i class="bx bx-book-content"></i>
+          <span>Portofolio</span>
+        </a>
+        <a href="#services" class="menu-link">
+          <i class='bx bx-server'></i>
+          <span>Services</span>
+        </a>
+        <a href="#contact" class="menu-link">
+          <i class="bx bx-envelope"></i>
+          <span>Contact</span>
+        </a>
+        <a href="#" class="menu-link">
+          <i class='bx bxs-moon'></i>
+          <span>Light/dark</span>
+        </a>
+      </div>
+    </div>
     <section class="home-page" id="home">
       <div class="profile-container">
         <div class="profile-image-container">
@@ -269,6 +324,8 @@
     <script>
       let sections = document.querySelectorAll('section');
       let sidebarLinks = document.querySelectorAll('.sidebar-link');
+      let navLinks = document.querySelectorAll('.nav-link');
+      let indicatorLinks = document.querySelectorAll('.indicator');
 
       let currentSection = 'home';
       window.addEventListener('scroll', () => {
@@ -282,6 +339,20 @@
           if (link.href.includes(currentSection)) {
             document.querySelector('.active').classList.remove('active');
             link.classList.add('active');
+          }
+        });
+
+        navLinks.forEach(link => {
+          if (link.href.includes(currentSection)) {
+            document.querySelector('.nav-active').classList.remove('nav-active');
+            link.classList.add('nav-active');
+          }
+        });
+
+        indicatorLinks.forEach(link => {
+          if (link.href.includes(currentSection)) {
+            document.querySelector('.indicator-active').classList.remove('indicator-active');
+            link.classList.add('indicator-active');
           }
         });
       });
@@ -312,6 +383,20 @@
 
       function closeAlert() {
         myAlert.classList.toggle('disabled');
+      };
+
+      const menuBtn = document.querySelector('.hamburger-menu');
+      const mainMenu = document.querySelector('.menu');
+      const menuLinks = document.querySelectorAll('.menu-link');
+
+      menuBtn.addEventListener('click', showMenu);
+
+      menuLinks.forEach(link => {
+        link.addEventListener('click', showMenu);
+      });
+
+      function showMenu() {
+        mainMenu.classList.toggle('show');
       }
     </script>
   </body>
