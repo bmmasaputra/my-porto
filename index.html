@@ -207,6 +207,12 @@
           <p>Hire me</p>
         </div>
         <div class="input-section">
+          <div class="dismiss-alert disabled">
+            <p>Message is send <strong>Succesfuly!</strong></p>
+            <button class="dismiss-button" type="dismiss">
+              <i class='bx bx-x'></i>
+            </button>
+          </div>
           <div class="name-email">
             <input type="text" name="name" placeholder="Name" required>
             <input type="email" name="email" placeholder="Email ID" required>
@@ -220,6 +226,11 @@
         </div>
         <div class="button-wrap">
           <button type="submit" class="send-button">SEND IT!!</button>
+          <button class="loading-button disabled">
+            <svg class="loading-animation">
+                <circle cx="15" cy="15" r="12"></circle>
+            </svg>
+        </button>
         </div>
       </form>
     </section>
@@ -276,18 +287,32 @@
       });
 
       const scriptURL = 'https://script.google.com/macros/s/AKfycbyrzHiDQ_cxRVGV9yHJtj3dqzoT8oZt_BfBdYxrEBcGTvqUyYBhYWK4xxqRkDFaLLw/exec';
-      const form = document.forms['submit-to-google-sheet']
+      const form = document.forms['submit-to-google-sheet'];
+      const myAlert = document.querySelector('.dismiss-alert');
+      const closeBtn = document.querySelector('.dismiss-button');
+      const sendBtn = document.querySelector('.send-button');
+      const loadingBtn = document.querySelector('.loading-button');
 
       form.addEventListener('submit', e => {
-        e.preventDefault()
+        e.preventDefault();
+        sendBtn.classList.toggle('disabled');
+        loadingBtn.classList.toggle('disabled');
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
           .then(response => {
             console.log('Success!', response);
-            alert('Message is SEND succesfuly!');
+            myAlert.classList.toggle('disabled');
+            sendBtn.classList.toggle('disabled');
+            loadingBtn.classList.toggle('disabled');
             form.reset();
           })
           .catch(error => console.error('Error!', error.message))
       })
+
+      closeBtn.addEventListener('click', closeAlert);
+
+      function closeAlert() {
+        myAlert.classList.toggle('disabled');
+      }
     </script>
   </body>
 </html>
