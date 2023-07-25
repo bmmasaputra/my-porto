@@ -514,12 +514,12 @@ body {
 
 .project {
     height: 350px;
-    color: #22252e;
-    background-color:  rgb(203, 213, 225);
+    color: #fff;
+    background-color: rgba(54, 50, 68, .5);
     padding: 0px 0px 35px 0px;
     border-radius: 20px;
-    transition: all .2s ease;
-    box-shadow: 0px -5px 20px rgba(255, 255, 255, .5);
+    transition: all .2s linear;
+    box-shadow: 0px -5px 20px rgba(0, 0, 0, .5);
 }
 
 .project:hover {
@@ -529,6 +529,7 @@ body {
 
 .project:hover .project-desc {
     opacity: 1;
+    transition: all 1s;
 }
 
 .project p {
@@ -548,7 +549,7 @@ body {
 
 .project-desc {
     opacity: 0;
-    transition: all .3s;
+    transition: all .1s;
 }
 
 .project-desc::before {
@@ -821,7 +822,7 @@ textarea::placeholder {
     background: none;
     padding: 6px 50px;
     border-radius: 10px;
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid rgb(248, 248, 248);
     position: relative;
     transition: .2s ease;
 }
@@ -838,7 +839,7 @@ textarea::placeholder {
     height: 100%;
     width: 100%;
     border-radius: 5px;
-    background: rgb(255, 255, 255);
+    background: rgb(248, 248, 248);
     z-index: -1;
     transition: .2s ease;
     transform-origin: 0 0;
@@ -850,7 +851,7 @@ textarea::placeholder {
 }
 
 .send-button:active {
-    opacity: .8;
+    opacity: .7;
 }
 
 .loading-button {
