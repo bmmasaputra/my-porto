@@ -74,9 +74,41 @@ menuLinks.forEach(link => {
 
 document.onclick = function() {
   menuId.classList.remove('show');
-}
+};
 
 function showMenu(e) {
   e.stopPropagation();
   mainMenu.classList.toggle('show');
-}
+};
+
+const projectOne = document.getElementById('project1');
+const projectTwo = document.getElementById('project2');
+const showBtn1 = document.getElementById('showBtn1');
+const showBtn2 = document.getElementById('showBtn2');
+const projects = document.querySelectorAll('.project');
+
+showBtn1.addEventListener('click', function() {
+  if (!(projectOne.classList.contains('show-project') || projectTwo.classList.contains('show-project'))) {
+    document.body.classList.add('extend');
+  } else {
+    if (!(projectTwo.classList.contains('show-project'))) {
+      document.body.classList.remove('extend');
+    }
+  }
+
+  projectOne.classList.toggle('show-project');
+  projectTwo.classList.remove('show-project');
+});
+
+showBtn2.addEventListener('click', function() {
+  if (!(projectOne.classList.contains('show-project') || projectTwo.classList.contains('show-project'))) {
+    document.body.classList.toggle('extend');
+  } else {
+    if (!(projectOne.classList.contains('show-project'))) {
+      document.body.classList.remove('extend');
+    }
+  }
+
+  projectTwo.classList.toggle('show-project');
+  projectOne.classList.remove('show-project');
+});
