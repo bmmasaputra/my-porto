@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portofolio</title>
+    <title>My Portofolio | Bima Agung Saputra</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -103,13 +103,20 @@
         <div class="name">Bima Agung Saputra</div>
         <div class="occupation">I'm a Front-end Web Developer</div>
         <div class="sosmed">
-          <i class="bx bxl-instagram-alt"></i>
-          <i class="bx bxl-twitter"></i>
-          <i class="bx bxl-github"></i>
-          <i class="bx bxl-linkedin-square"></i>
-          <i class="bx bxl-discord-alt"></i>
+          <a target="_blank" href="https://www.instagram.com/bmma_sptra/"><i class="bx bxl-instagram-alt social-icon"></i></a>
+          <a target="_blank" href="https://twitter.com/Humanmaybe1"><i class="bx bxl-twitter social-icon"></i></a>
+          <a target="_blank" href="https://github.com/bmmasaputra"><i class="bx bxl-github social-icon"></i></a>
+          <a target="_blank" href="https://www.linkedin.com/in/bima-saputra-462160247/"><i class="bx bxl-linkedin-square social-icon"></i></a>
+          <a target="_blank" href="https://discordapp.com/users/913421520561406002"><i class="bx bxl-discord-alt social-icon"></i></a>
         </div>
       </div>
+      <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250">
+        <path fill="#2c2e3a" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,
+        192C384,171,480,117,576,128C672,139,768,213,864,213.3C960,213,1056,139,1152,
+        106.7C1248,75,1344,85,1392,90.7L1440,96L1440,320L1392,320C1344,320,1248,320,
+        1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,
+        320C192,320,96,320,48,320L0,320Z"></path>
+      </svg>
     </section>
     <section class="about-page" id="about">
       <div class="grid-container">
@@ -118,22 +125,22 @@
           <img src="images/about.jpg" class="about-image" />
           <div class="text-section">
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias
-              provident asperiores fugiat minus pariatur eum tenetur cumque
-              accusamus veniam, unde id quibusdam suscipit ad nisi ut explicabo
-              soluta, eius beatae.
+              A Dedicated college student currently majoring in a Computer 
+              Science degree at the University of Palangka Raya. Along side my 
+              studies, I'm also starting to pursue my passion on web development 
+              on the side.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsa
-              dicta magni qui ad iusto expedita, voluptatibus, sapiente ratione
-              quaerat, laudantium dolores eius esse exercitationem deleniti
-              corporis voluptas voluptates assumenda.
+              Currently focusing on front-end development, and UI/UX 
+              design. However, moving forward i plan to study back-end development 
+              to double down as a full-stack developer and broaden my skill set. 
+              and maintain a good grades to hopefully finish my studies on time.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
-              nemo omnis in ratione facilis dolor officia id quis perferendis
-              sed debitis eaque magnam beatae! Itaque voluptas illo obcaecati
-              labore perferendis?
+              I am deeply enthusiastic about technology and the prospect of its 
+              advancement in the foreseeable future. Outside of that, you will find 
+              me geek out about Formula 1, Max Verstappen is the 🐐 lol. Anyway,
+              welcome to my website :)
             </p>
           </div>
         </div>
@@ -175,41 +182,46 @@
         </div>
       </div>
     </section>
-    <section class="portofolio-page" id="portofolio">
+    <section class="portofolio-page extend-page" id="portofolio">
       <div class="grid-container">
         <div class="portofolio-header-wrap">
           <div class="portofolio-header">PORTOFOLIO</div>
         </div>
         <p class="portofolio-desc" >My recent projects</p>
-        <div class="portofolio-grid">
-          <div class="project">
+        <div class="portofolio-grid extend-grid">
+          <div id="project1" class="project">
             <img src="images/web1.png">
             <div class="project-text-wrap">
-              <p>My Own Portofolio Website</p>
+              <div class="project-name-wrap">
+                <p>My Own Portofolio Website</p>
+                <button id="showBtn1" class="show-button">
+                  <i class='bx bx-chevron-down'></i>
+                </button>
+              </div>
               <div class="project-desc">
                 <p>Category : Web design</p>
                 <p>Web URL<span style="opacity: 0;">c</span>: <a href="">bla-bla.com</a></p>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                  Molestias officiis maiores repellat, neque iure saepe dolore, 
-                  ut voluptatem commodi harum soluta explicabo ratione deserunt? 
-                  Sint, magni nobis! Ea, eum neque!
+                  A simple portofolio website built with HTML, CSS, JavaScript, and 
+                  a bit of Apps Script to store the contact form data to a spreadsheet.
                 </p>
               </div>
             </div>
           </div>
-          <div class="project">
+          <div id="project2" class="project">
             <img src="images/web2.png">
             <div class="project-text-wrap">
-              <p>Youtube Clone Website</p>
+              <div class="project-name-wrap">
+                <p>Youtube Clone Website</p>
+                <button id="showBtn2" class="show-button">
+                  <i class='bx bx-chevron-down'></i>
+                </button>
+              </div>
               <div class="project-desc">
                 <p>Category : Web design</p>
                 <p>Web URL<span style="opacity: 0;">c</span>: <a href="">bla-bla.com</a></p>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                  Molestias officiis maiores repellat, neque iure saepe dolore, 
-                  ut voluptatem commodi harum soluta explicabo ratione deserunt? 
-                  Sint, magni nobis! Ea, eum neque!
+                  A YouTube-like website built solely for me to learn HTML and CSS. 
                 </p>
               </div>
             </div>
@@ -227,7 +239,7 @@
         </div>
         <div class="service-section">
           <div class="blob-wrap">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <svg class="blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
               <path fill="#ADD8E6" d="M22.7,-19.2C32.3,-6,45,3.6,48.7,20.6C52.4,37.6,47,61.9,
               33.6,67.5C20.2,73,-1.1,59.8,-22,48.6C-42.9,37.4,-63.4,28.3,-65.8,15.7C-68.1,3,-52.4,
               -13.1,-38.4,-27.3C-24.4,-41.5,-12.2,-53.9,-2.8,-51.6C6.5,-49.3,13,-32.5,22.7,-19.2Z" 
@@ -310,11 +322,11 @@
         </div>
         <hr>
         <div class="sosmed-footer">
-          <a class="sosmed-link"><i class="bx bxl-instagram-alt"></i></a>
-          <a class="sosmed-link"><i class="bx bxl-twitter"></i></a>
-          <a class="sosmed-link"><i class="bx bxl-github"></i></a>
-          <a class="sosmed-link"><i class="bx bxl-linkedin-square"></i></a>
-          <a class="sosmed-link"><i class="bx bxl-discord-alt"></i></a>
+          <a class="sosmed-link" target="_blank" href="https://www.instagram.com/bmma_sptra/"><i class="bx bxl-instagram-alt"></i></a>
+          <a class="sosmed-link" target="_blank" href="https://twitter.com/Humanmaybe1"><i class="bx bxl-twitter"></i></a>
+          <a class="sosmed-link" target="_blank" href="https://github.com/bmmasaputra"><i class="bx bxl-github"></i></a>
+          <a class="sosmed-link" target="_blank" href="https://www.linkedin.com/in/bima-saputra-462160247/"><i class="bx bxl-linkedin-square"></i></a>
+          <a class="sosmed-link" target="_blank" href="https://discordapp.com/users/913421520561406002"><i class="bx bxl-discord-alt"></i></a>
         </div>
         <div class="copyright">
           <p>Copyright © 2023 <strong>bmmasaputra</strong> | All Rights Reserved.</p>
