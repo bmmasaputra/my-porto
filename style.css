@@ -632,7 +632,7 @@ body {
 
 .services-header-wrap p {
     margin-top: 8px;
-    color: rgb(140, 140, 140);;
+    color: rgb(140, 140, 140);
     font-weight: 600;
 }
 
@@ -652,7 +652,7 @@ body {
 }
 
 .service {
-    background-color: rgb(136, 122, 214);;
+    background-color: rgb(136, 122, 214);
     width: 250px;
     padding: 30px 0px;
     display: grid;
