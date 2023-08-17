@@ -701,7 +701,6 @@ body {
     height: 700px;
     top: calc(100vh + 2350px);
     background-color: #22252e;
-    z-index: -2;
 }
 
 .contact-section {
@@ -763,7 +762,7 @@ body {
 }
 
 .dismiss-alert p {
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 15px;
     flex: 20;
 }
@@ -780,7 +779,7 @@ body {
 
 .dismiss-button i {
     font-size: 35px;
-    color: rgba(0, 0, 0, .5);
+    color: rgba(255, 255, 255);
 }
 
 .dismiss-button:hover {
@@ -789,10 +788,6 @@ body {
 
 .dismiss-button:active {
     background-color: rgba(255, 255, 255, .1);
-}
-
-.dismiss-button i:hover {
-    color: rgba(0, 0, 0, .5);
 }
 
 .name-email {
@@ -851,13 +846,15 @@ textarea::placeholder {
     background: none;
     padding: 6px 50px;
     border-radius: 10px;
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid rgb(163, 204, 199);
     position: relative;
-    transition: .2s ease-in;
+    transition: color .2s ease-in;
+    cursor: pointer;
+    isolation: isolate;
 }
 
 .send-button:hover {
-    color: #22252e;
+    color: #ffffff;
 }
 
 .send-button::before {
@@ -868,24 +865,23 @@ textarea::placeholder {
     height: 100%;
     width: 100%;
     border-radius: 5px;
-    background: rgb(255, 255, 255);
+    background: rgb(163, 204, 199);
     z-index: -1;
-    transition: .2s ease-in;
-    transform-origin: 0 0;
-    transform: scaleX(0);
-}
-
-.send-button:hover::before {
+    transition: transform .2s ease-in;
+    transform-origin: left;
     transform: scaleX(1);
 }
 
+.send-button:hover::before {
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
 .send-button:active {
-    opacity: .7;
-    transition: 0s;
+    transform: scale(.98);
 }
 
 .loading-button {
-    position: relative;
     width: 170px;
     height: 46px;
     box-sizing: border-box;
@@ -896,12 +892,12 @@ textarea::placeholder {
     background: none;
     padding: 4px 50px;
     border-radius: 10px;
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid rgb(163, 204, 199);
 }
 
 .loading-animation {
-    position: absolute;
-    top: 4px;
+    position: relative;
+    top: 2px;
     height: 30px;
     width: 30px;
     animation: rotate 2s linear infinite;
