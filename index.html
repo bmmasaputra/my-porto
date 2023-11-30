@@ -20,22 +20,24 @@
       rel="stylesheet" 
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css"/>
   </head>
   <body>
     <div class="sidebar">
-      <a href="#home" class="sidebar-link active">
+      <a id="home-nav" href="#home" class="sidebar-link active">
         <i class="bx bx-home"></i><span>Home</span>
       </a>
-      <a href="#about" class="sidebar-link">
+      <a id="about-nav" href="#about" class="sidebar-link">
         <i class="bx bx-user"></i><span>About</span>
       </a>
-      <a href="#portofolio" class="sidebar-link">
+      <a id="porto-nav" href="#portofolio" class="sidebar-link">
         <i class="bx bx-book-content"></i><span>Portofolio</span>
       </a>
-      <a href="#services " class="sidebar-link">
+      <a id="services-nav" href="#services " class="sidebar-link">
         <i class='bx bx-server'></i><span>Services</span>
       </a>
-      <a href="#contact" class="sidebar-link">
+      <a id="contact-nav" href="#contact" class="sidebar-link">
         <i class="bx bx-envelope"></i><span>Contact</span>
       </a>
     </div>
@@ -97,10 +99,10 @@
     <section class="home-page" id="home">
       <div class="profile-container">
         <div class="profile-image-container">
-          <img class="profile-image" src="images/profile-images.jpg" />
+          <img id="hero-image" class="profile-image" src="images/hero.png" />
         </div>
         <div class="greeting">Hello World 👋 I'm</div>
-        <div class="name">Bima Agung Saputra</div>
+        <div id="name" class="name">Bima Agung Saputra</div>
         <div class="occupation">I'm a Front-end Web Developer</div>
         <div class="sosmed">
           <a target="_blank" href="https://www.instagram.com/bmma_sptra/"><i class="bx bxl-instagram-alt social-icon"></i></a>
@@ -122,7 +124,7 @@
       <div class="grid-container">
         <div class="about-header">ABOUT</div>
         <div class="row">
-          <img src="images/about.jpg" class="about-image" />
+          <img src="images/about.png" class="about-image" />
           <div class="text-section">
             <p>
               A Dedicated college student currently majoring in a Computer 
@@ -334,5 +336,24 @@
       </div>
     </footer>
     <script src="script.js"></script>
+    <script>
+      const Driver = window.driver.js.driver;
+      
+      const driver = Driver({
+        showButtons: ['next', 'previous'],
+        steps: [
+          {element: '#home-nav', popover: {title: 'Navigation', description: 'Tombol untuk menuju home page', side: 'right', align:'start'}},
+          {element: '#about-nav', popover: {title: 'Navigation', description: 'Tombol untuk menuju about page', side: 'right', align:'start'}},
+          {element: '#porto-nav', popover: {title: 'Navigation', description: 'Tombol untuk menuju portofolio page', side: 'right', align:'start'}},        
+          {element: '#services-nav', popover: {title: 'Navigation', description: 'Tombol untuk menuju services page', side: 'right', align:'start'}},
+          {element: '#contact-nav', popover: {title: 'Navigation', description: 'Tombol untuk menghubungi developer', side: 'right', align:'start'}},
+          {element: '#hero-image', popover: {title: 'Profile Image', description: 'Wujud asli developer', side: 'top', align:'start'}},
+          {element: '#name', popover: {title: 'Name', description: 'Nama developer', side: 'top', align:'start'}},
+          {popover: { title: 'Dah tamat', description: 'Terima kasih telah mengunjungi website saya, jangan lupa subscribe' } }
+        ]
+      });
+
+      driver.drive();
+    </script>
   </body>
 </html>
